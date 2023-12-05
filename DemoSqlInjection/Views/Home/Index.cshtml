@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model DemoSqlInjection.Models.Users
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if (Model.FirstName == "")
+    {
+        <p>Vui lòng đăng nhập<a href="@Url.Action("Login","Home")"> tại đây</a></p>
+    } else
+    {
+        <h3>@Model.FirstName @Model.LastName</h3><a href="@Url.Action("About", "Home", new {id = Model.UserId})">Xem thêm</a>
+    }
+</div>

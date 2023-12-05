@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "About you";
+}
+@model DemoSqlInjection.Models.Users
+<div class="text-center">
+    <h2 class="display-4">Thông tin của bạn</h2>
+    
+        <ul class="list-group">
+            <li class="list-group-item">Mail: @Model.Email</li>
+            <li class="list-group-item">Name: @Model.FirstName @Model.LastName</li>
+            <li class="list-group-item">Phone: @Model.Phone</li>
+        </ul>
+    
+</div>
